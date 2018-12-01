@@ -1,2 +1,0 @@
-# jotto
-Created with CodeSandbox
