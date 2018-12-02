@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
 import "./styles.css";
 import GuessedWords from "./GuessedWords";
 import Congrats from "./Congrats";
+import store from "./configureStore";
 
 function App() {
     return (
@@ -18,4 +20,9 @@ function App() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    rootElement
+);
